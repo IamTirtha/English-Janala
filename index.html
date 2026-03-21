@@ -1,27 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English Janala</title>
-    <link rel="stylesheet" href="./english-janala-resources/assets/logo.png">
-<!-- Linked DaisyUI and tailwindcss -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./english-janala-resources/assets/logo.png" />
+    <!-- Linked DaisyUI and tailwindcss -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<!-- Font awesome Linked -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- Linked font here -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Da+2:wght@400..800&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Da+2:wght@400..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font awesome Linked -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Linked font here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Da+2:wght@400..800&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Da+2:wght@400..800&family=Hind+Siliguri:wght@300;400;500;600;700&family=Luckiest+Guy&family=Manrope:wght@200..800&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+    <header>
+        <div class="bg-[#c5e2fc] flex flex-col md:flex-row justify-around items-center p-5 gap-4">
+            <div class="navbar-start">
+                <a class="btn btn-ghost text-xl">English <img src="./english-janala-resources/assets/logo.png" alt="janala logo"><p class="font-bangla">জানালা</p></a>
+            </div>
+            <div class="navbar-end flex flex-col sm:flex-row gap-3 w-full md:w-auto justify-center md:justify-end">
+                <a class="text-[#422AD5] font-semibold text-[14px] bg-none border-2 border-[#422AD5] rounded px-4 py-2 cursor-pointer"><i class="fa-regular fa-circle-question"></i>FAQ</a>
+                <a class="text-[#422AD5] font-semibold text-[14px] bg-none border-2 border-[#422AD5] rounded px-4 py-2 cursor-pointer"><i class="fa-solid fa-book"></i>Learn</a>
+                <a class="text-[#422AD5] font-semibold text-[14px] bg-none border-2 border-[#422AD5] rounded px-4 py-2 cursor-pointer"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            </div>
+        </div>
+    </header>
 
-
-</head>
-<body>
-    <h1 class="text-8xl p-10">English</h1>
-    
-</body>
+    <section class="mx-auto flex flex-col-reverse md:flex-row items-center justify-between py-5 gap-8 w-11/12">
+        <div class="content space-y-4 text-center md:text-left">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold"><span class="text-cyan-300">English</span> is Easy !!</h2>
+            <p class="font-bangla text-sm sm:text-base md:text-lg leading-relaxed">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা  আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে  যাবে অন্য একটি Level এ</p>
+            <button class="text-white font-semibold fontsize-[14px] bg-[#422AD5] border-2 border-[#422AD5] rounded px-4 py-2 cursor-pointer">Get Started</button>
+        </div>
+        <div class="image">
+            <img src="./english-janala-resources/assets/hero-student.png" alt="logo" class="w-full max-w-xs sm:max-w-sm md:max-w-md">
+        </div>
+    </section>
+    </body>
 </html>
