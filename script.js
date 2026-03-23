@@ -165,3 +165,17 @@ document.getElementById("btn-search").addEventListener("click",()=>{
     })
     
 })
+
+const toggleFAQ=(id)=>{
+    const icon=document.getElementById(`icon-${id}`)
+    const content=document.getElementById(`content-${id}`)
+    // console.log(content);
+    content.classList.toggle("hidden");
+
+    if (content.classList.contains("hidden")) {
+    icon.textContent = "+";
+    } else {
+    icon.textContent = "−";
+    }
+    
+}
