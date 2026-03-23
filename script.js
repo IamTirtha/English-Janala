@@ -12,6 +12,13 @@ const removeActive=()=>{
     lessonButton.forEach(btn=> btn.classList.remove("active"))
 }
 
+//Audio Add korbo
+function pronounceWord(word) {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "en-EN"; // English
+    window.speechSynthesis.speak(utterance);
+}
+
 const loadWord=(id)=>{
     const url=`https://openapi.programming-hero.com/api/level/${id}`
     fetch(url)
@@ -111,7 +118,7 @@ const displayWord=(word)=>{
             <!-- Buttons -->
                 <div class="flex justify-between gap-8 mt-4">
                     <button onclick="loadWordDetail(${w.id})" class="bg-[#1A91FF10] p-2 rounded-2xl hover:bg-[#1A91FF]"><i class="fa-solid fa-circle-info"></i></button>
-                    <button class="bg-[#1A91FF10] p-2 rounded-2xl hover:bg-[#1A91FF]"><i class="fa-solid fa-volume-high"></i></button>
+                    <button onclick="pronounceWord('${w.word}')" class="bg-[#1A91FF10] p-2 rounded-2xl hover:bg-[#1A91FF]"><i class="fa-solid fa-volume-high"></i></button>
                 </div>
             </div>
         </div>
@@ -139,3 +146,22 @@ const displayData=(data)=>{
     }
 }
 loadData()
+
+document.getElementById("btn-search").addEventListener("click",()=>{
+    const input=document.getElementById("input-search")
+    const showValue=input.value.trim().toLowerCase();
+    console.log(showValue);
+
+    fetch("https://openapi.programming-hero.com/api/words/all")
+    .then((res)=>res.json())
+    .then(data=>{
+        const allWords=data.data
+        // console.log(allWords);
+        const filterWord=allWords.filter((word)=>
+            word.word.toLowerCase().includes(showValue)
+        )
+        displayWord(filterWord);
+        
+    })
+    
+})
